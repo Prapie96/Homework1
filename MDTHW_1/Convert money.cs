@@ -1,4 +1,17 @@
 class MoneyCon{
+    public static string getmoney()
+    {
+        Console.Write("Get Money : ");
+        return Console.ReadLine();
+    }
+     public static double  convertmoneytodouble(string getmoney)
+    {
+        if (double.TryParse(getmoney,out double onlynum2))
+        {
+            return onlynum2;
+        }
+        throw new Exception("Please put just number ");
+    }
     
     public void Convertmoney(double Moneyex)
     { 
@@ -51,6 +64,7 @@ class MoneyCon{
         double coin050,remain050,coin025,remain025;
         
         coin050 = 0.5/demical;
+        remain050 = coin050 % 0.5;
          Console.WriteLine("Coin 0.50: {0}",Convert.ToInt32(coin050));
          
          coin025 = 0.25/demical;

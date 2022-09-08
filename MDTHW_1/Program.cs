@@ -6,7 +6,7 @@ class Program{
     
     static void Main(string[]args)
     {   
-       /* putinfo info = new putinfo(); 
+       putinfo info = new putinfo(); 
         string Nameshop = putinfo.getnameshop();
         string Tax = putinfo.getTaxnum();
         long converttax = putinfo.converttaxtolong(Tax);
@@ -15,11 +15,11 @@ class Program{
         long convertregis = putinfo.convertregistolong(Registerednumber);
         showinfoshop infoshop = new showinfoshop();
         showinfoshop.Showinformation(Nameshop,Tax,nameofowner,Registerednumber);
-        */
+        
         //Converting money
          MoneyCon showconvert = new MoneyCon();
-        string  Money = putinfo.getmoney();
-        double convertmoney = putinfo.convertmoneytodouble(Money);
+        string  Money = MoneyCon.getmoney();
+        double convertmoney = MoneyCon.convertmoneytodouble(Money);
        
         showconvert.Convertmoney(convertmoney);
     }
